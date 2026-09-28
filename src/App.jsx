@@ -32,10 +32,12 @@ function App() {
       <button type="button" onClick={handleAdd}>
         Lägg till
       </button>
+      {/* TODO: detta skalar inte — behöver loop */}
       <ul>
         <li>{todos[0]}</li>
         <li>{todos[1]}</li>
         <li>{todos[2]}</li>
+        <li>{todos[3]}</li>
       </ul>
     </main>
   );
