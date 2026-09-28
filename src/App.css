@@ -1,0 +1,11 @@
+.knappar {
+  display:flex;
+  gap:10px;
+  margin: 50px;
+  justify-content: center;
+  background-color:white;
+  color: green;
+}
+.produkt{
+  color:blue;
+}
