@@ -1,16 +1,16 @@
-# React + Vite
+Varför är .map ett löpande band?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+.map går igenom alla saker i en array, en i taget.
+I min kod går .map igenom varje todo och gör om den till en <li>.
+Jag kan tänka på .map som ett löpande band eftersom varje todo kommer en efter en och blir omgjord till en lista. Sedan går den vidare till nästa todo.
 
-Currently, two official plugins are available:
+Varför är .filter en sil och inte en kniv?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+.filter går igenom alla saker i en array och kollar vilka som passar ett villkor.
+De saker som passar får vara kvar, medan de andra tas bort.
+Jag kan tänka på .filter som en sil eftersom den släpper igenom vissa saker och stoppar andra. Den är inte en kniv eftersom den inte delar eller ändrar sakerna, utan bara väljer vilka som ska vara kvar.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Vad gör key — och vad är den INTE?
+key hjälper React att hålla koll på vilken lista varje element tillhör.
+I min kod har jag key={todo} på varje <li>. Då kan React se skillnad på de olika uppgifterna när listan ändras.
+key är inte det som visar texten på sidan och den är inte heller ett vanligt värde som jag använder i appen. Den används av React för att hålla koll på elementen i listan.
